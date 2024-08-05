@@ -25,7 +25,7 @@ This repository demonstrates various text chunking strategies for Retrieval-Augm
 ## Installation
 
 1. Clone this repository
-2. Install required packages: pip install langchain langchain_openai langchain_community langchain_experimental python-dotenv matplotlib
+2. Install required packages: pip install -r requirements.txt
 3. Set up your OpenAI API key in a `.env` file: OPENAI_API_KEY=your_api_key_here
 
 ## Usage
