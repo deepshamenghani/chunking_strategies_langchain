@@ -3,10 +3,10 @@ from langchain_community.document_loaders import TextLoader
 import matplotlib.pyplot as plt
 
 # Load the document
-loader = TextLoader('superhero_facts.txt')
+superherofacts = TextLoader('superhero_facts.txt')
 
 # Create the RecursiveCharacterTextSplitter
-text_splitter = RecursiveCharacterTextSplitter(
+superherofacts_splitter = RecursiveCharacterTextSplitter(
     separators=["\n\n", "\n", " ", ""],
     chunk_size=150,
     chunk_overlap=0,
@@ -14,7 +14,7 @@ text_splitter = RecursiveCharacterTextSplitter(
 )
 
 # Load and split the text
-chunks = loader.load_and_split(text_splitter=text_splitter)
+chunks = superherofacts.load_and_split(text_splitter=superherofacts_splitter)
 
 # Print the chunks
 for i, chunk in enumerate(chunks, 1):
