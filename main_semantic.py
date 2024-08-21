@@ -8,16 +8,16 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Load the document
-loader = TextLoader('superhero_facts.txt')
+superherofacts = TextLoader('superhero_facts.txt')
 
 # Create the SemanticChunker
-text_splitter = SemanticChunker(
+superherofacts_text_splitter = SemanticChunker(
     OpenAIEmbeddings(openai_api_key=os.getenv("OPENAI_API_KEY")),
     number_of_chunks=10
 )
 
 # Load and split the text
-chunks = loader.load_and_split(text_splitter=text_splitter)
+chunks = superherofacts.load_and_split(text_splitter=superherofacts_text_splitter)
 
 # Print the chunks
 for i, chunk in enumerate(chunks, 1):
