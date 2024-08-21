@@ -1,10 +1,9 @@
-def fixed_size_chunks(text, chunk_size=150):
-    return [text[i:i+chunk_size] for i in range(0, len(text), chunk_size)]
+chunk_size = 150
 
 with open('superhero_facts.txt', 'r') as file:
     data = file.read()
-    
-chunks = fixed_size_chunks(data)
+
+chunks = [data[i:i+chunk_size] for i in range(0, len(data), chunk_size)]
 
 for i, chunk in enumerate(chunks, 1):
     print(f"Chunk {i}: {chunk}")
