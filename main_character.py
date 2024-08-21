@@ -3,7 +3,7 @@ from langchain_community.document_loaders import TextLoader
 import matplotlib.pyplot as plt
 
 # Load the document
-loader = TextLoader('superhero_facts.txt')
+superherofacts = TextLoader('superhero_facts.txt')
 
 # Create the CharacterTextSplitter
 text_splitter = CharacterTextSplitter(
@@ -14,7 +14,7 @@ text_splitter = CharacterTextSplitter(
 )
 
 # Load and split the text
-chunks = loader.load_and_split(text_splitter=text_splitter)
+chunks = superherofacts.load_and_split(text_splitter=text_splitter)
 
 # Print the chunks
 for i, chunk in enumerate(chunks, 1):
